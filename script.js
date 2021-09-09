@@ -43,7 +43,7 @@ function typewriter(id) {
   
   let typewriter = container.getElementsByClassName('typewriter')[0];
   
-  let content = [...container.getElementsByClassName('original')[0].childNodes].map(n => n.nodeType === 3 ? [...n.textContent.split('')] : [n.cloneNode(true)]).flat();
+  let content = [...container.getElementsByClassName('original')[0].childNodes].map(n => n.nodeType === 3 ? [...n.textContent] : [n.cloneNode(true)]).flat();
   let pointer = 0;
   
   (function writeLetter() {
